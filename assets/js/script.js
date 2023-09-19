@@ -8,6 +8,8 @@ async function consulta() {
     const respuesta = await fetch(url + monedaElegida);
     if (!respuesta.ok) {
       throw new Error("Favor Seleccione un Tipo de Moneda");
+    }else if(valorCLP == "" || valorCLP == 0 ){
+      throw new Error("Favor ingrese un Monto Valido");
     }
     const data = await respuesta.json();
     const valorMoneda = data.serie[0].valor
@@ -17,8 +19,8 @@ async function consulta() {
     
     return data;
   } catch (error) {
-    alert(error);
-    throw error;
+    const error_span = document.querySelector("#error");
+    error_span.innerHTML = `¡Algo Salio Mal! Error: ${error.message}`
   }
 }
 
