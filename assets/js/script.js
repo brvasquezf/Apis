@@ -7,7 +7,7 @@ async function consulta() {
     const parrafoResultado = document.getElementsByTagName("p")[1]
     const respuesta = await fetch(url + monedaElegida);
     if (!respuesta.ok) {
-      throw new Error("Error en la petición");
+      throw new Error("Favor Seleccione un Tipo de Moneda");
     }
     const data = await respuesta.json();
     const valorMoneda = data.serie[0].valor

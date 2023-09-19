@@ -1,5 +1,36 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    background: darkslateblue;
+    color: white;
+}
+.template{
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 500px;
+        min-width: 300px;
+        background: gainsboro;
+        border: 1px black solid;
+        color: black;
+}
+
 h1{
     text-align: center;
+    padding: 25px;
+    border-bottom: 1px black solid;
+    width: 90%;
+}
+
+#myChart{
+    background-color: white;
+    box-sizing: border-box;
+    display: block;
+    height: 500px;
+    width: 500px;
 }
 
 
